@@ -158,7 +158,7 @@
       /* al pasar el ratón se ven su nombre y el de los puntos de al lado */
       d.addEventListener('mouseenter', () => {
         dots.forEach((o, j) => {
-          const near = Math.abs(j - i) === 1 && !o.classList.contains('is-past');
+          const near = Math.abs(j - i) === 1;
           o.classList.toggle('show-label', j === i || near);
           o.classList.toggle('is-near', near);
         });
