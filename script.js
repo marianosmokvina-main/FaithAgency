@@ -155,6 +155,15 @@
         e.preventDefault();
         sec.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
       });
+      /* al pasar el ratón se ven su nombre y el de los puntos de al lado */
+      d.addEventListener('mouseenter', () => {
+        dots.forEach((o, j) => {
+          const near = Math.abs(j - i) === 1 && !o.classList.contains('is-past');
+          o.classList.toggle('show-label', j === i || near);
+          o.classList.toggle('is-near', near);
+        });
+      });
+      d.addEventListener('mouseleave', () => dots.forEach((o) => o.classList.remove('show-label', 'is-near')));
       dock.appendChild(d);
       dots.push(d);
     });
@@ -179,7 +188,7 @@
     if (!dots.length) return;
     let cur = -1;
     for (let i = 0; i < tops.length; i++) {
-      const dotY = dockTop + (tops.length - 1 - i) * dockGap + dockDot / 2;   /* el primer capítulo es el punto de abajo */
+      const dotY = dockTop + i * dockGap + dockDot / 2;   /* orden de la página: el primer capítulo arriba */
       if (tops[i] + nodeOffsets[i] <= dotY) cur = i;
     }
     if (cur === curDot) return;
@@ -250,7 +259,7 @@
        en el móvil queda tapado y la línea siempre se ve conectada */
     const left = dots.length - (curDot + 1);
     const tuck = left > 0 ? Math.min(22, (left - 1) * dockGap + dockDot + 3) : 0;
-    const pen = dots.length ? dockTop + tuck : vh * 0.62;
+    const pen = dots.length ? dockTop + (curDot + 1) * dockGap + tuck : vh * 0.62;   /* borde de arriba visible de la cápsula */
     const rects = lite ? null : drawables.map((d) => d.host.getBoundingClientRect());
     const stepRects = steps.map((s) => s.getBoundingClientRect());
     const tops = chapters.map((c) => c.getBoundingClientRect().top);

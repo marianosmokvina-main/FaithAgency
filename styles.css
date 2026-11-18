@@ -402,7 +402,7 @@ section[id] { scroll-margin-top: 8px; }
   border-radius: 999px;
   background: rgba(8, 8, 7, .88);
   box-shadow: inset 0 0 0 1px rgba(255, 255, 255, .07);
-  clip-path: inset(0 0 var(--cut, 0px) 0 round 999px);
+  clip-path: inset(var(--cut, 0px) 0 0 0 round 999px);
   transition: clip-path .4s var(--ease) .12s;
 }
 .dock__track {
@@ -412,7 +412,7 @@ section[id] { scroll-margin-top: 8px; }
   bottom: calc(var(--dot) / 2);
   width: 2px;
   background: rgba(201, 168, 76, .3);
-  clip-path: inset(0 0 var(--cut, 0px) 0);
+  clip-path: inset(var(--cut, 0px) 0 0 0);
   transition: clip-path .4s var(--ease) .12s;
 }
 .dock__dot {
@@ -421,7 +421,7 @@ section[id] { scroll-margin-top: 8px; }
   pointer-events: none;
   -webkit-tap-highlight-color: transparent;
   left: calc(7px - var(--dot) / 2);
-  top: calc((var(--n) - 1 - var(--i)) * var(--gap));
+  top: calc(var(--i) * var(--gap));
   width: var(--dot);
   height: var(--dot);
   border-radius: 50%;
@@ -461,7 +461,9 @@ section[id] { scroll-margin-top: 8px; }
 }
 @media (hover: hover) {
   .dock__dot:not(.is-past):hover { background: var(--gold-2); box-shadow: inset 0 0 0 1px var(--gold-2); }
-  .dock__dot:not(.is-past):hover::after { opacity: 1; transform: translate(0, -50%); }
+  .dock__dot.show-label::after { opacity: 1; transform: translate(0, -50%); }
+  /* los de al lado, un poco más apagados */
+  .dock__dot.show-label.is-near::after { opacity: .62; color: var(--text-mid); box-shadow: inset 0 0 0 1px var(--border-strong); }
 }
 /* el siguiente capítulo */
 .dock__dot.is-next { background: rgba(201, 168, 76, .45); box-shadow: inset 0 0 0 1px var(--gold-2), 0 0 0 2.5px rgba(201, 168, 76, .22); }
@@ -566,14 +568,15 @@ section[id] { scroll-margin-top: 8px; }
   contain: strict;
 }
 /* sin máscara: con máscara el navegador repinta todo el hero en cada fotograma */
-.hero__pulses i { position: absolute; display: block; will-change: transform; transform: translateX(-300px); }
+/* "backwards": mientras esperan su turno ya están en su punto de partida (fuera de la vista), no quietos sobre la grilla */
+.hero__pulses i { position: absolute; display: block; will-change: transform; }
 .p-h {
   left: 0;
   bottom: calc(var(--k) * var(--cell));
   width: 230px;
   height: 1px;
   background: linear-gradient(90deg, transparent, rgba(226, 192, 112, .5) 70%, #f3d98f);
-  animation: pulso-h var(--t) linear var(--dl) infinite;
+  animation: pulso-h var(--t) linear var(--dl) infinite backwards;
 }
 .p-h--back { background: linear-gradient(270deg, transparent, rgba(226, 192, 112, .5) 70%, #f3d98f); animation-name: pulso-h-back; }
 .p-v {
@@ -582,7 +585,7 @@ section[id] { scroll-margin-top: 8px; }
   width: 1px;
   height: 200px;
   background: linear-gradient(180deg, transparent, rgba(226, 192, 112, .5) 70%, #f3d98f);
-  animation: pulso-v var(--t) linear var(--dl) infinite;
+  animation: pulso-v var(--t) linear var(--dl) infinite backwards;
 }
 .p-v--up { background: linear-gradient(0deg, transparent, rgba(226, 192, 112, .5) 70%, #f3d98f); animation-name: pulso-v-up; }
 @keyframes pulso-h { 0% { transform: translateX(-240px); } 70%, 100% { transform: translateX(calc(100vw + 20px)); } }
