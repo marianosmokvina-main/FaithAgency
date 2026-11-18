@@ -137,18 +137,24 @@
      Un punto por capítulo que falta. Al llegar a un capítulo su punto se enciende,
      desaparece y la lista se acorta (10, 9, 8…). Al subir, vuelven. */
   const dock = $('[data-dock]');
-  const chapters = $$('main section[data-chapter]')
-    .filter((s) => s !== hero)
-    .map((s) => $('.chapter, .node', s))
-    .filter(Boolean);
+  const chapterSecs = $$('main section[data-chapter]').filter((s) => s !== hero && $('.chapter, .node', s));
+  const chapters = chapterSecs.map((s) => $('.chapter, .node', s));
   const dots = [];
   let curDot = -2;
   if (dock && chapters.length > 1) {
     dock.style.setProperty('--n', String(chapters.length));
-    chapters.forEach((_, i) => {
-      const d = document.createElement('span');
+    /* cada punto lleva a su capítulo (la isla sigue siendo el menú accesible) */
+    chapterSecs.forEach((sec, i) => {
+      const d = document.createElement('a');
       d.className = 'dock__dot';
+      d.href = `#${sec.id}`;
+      d.tabIndex = -1;
+      d.dataset.label = sec.dataset.chapter;
       d.style.setProperty('--i', String(i));
+      d.addEventListener('click', (e) => {
+        e.preventDefault();
+        sec.scrollIntoView({ behavior: scrollBehavior(), block: 'start' });
+      });
       dock.appendChild(d);
       dots.push(d);
     });
@@ -240,7 +246,11 @@
     const vh = window.innerHeight;
     const lite = isLite();
     const dockTop = dots.length ? dock.getBoundingClientRect().top : 0;
-    const pen = dots.length ? dockTop - 7 : vh * 0.62;   /* 7 px: borde superior de la cápsula */
+    /* la punta entra unos píxeles por debajo de la cápsula: así el pequeño retraso del scroll
+       en el móvil queda tapado y la línea siempre se ve conectada */
+    const left = dots.length - (curDot + 1);
+    const tuck = left > 0 ? Math.min(22, (left - 1) * dockGap + dockDot + 3) : 0;
+    const pen = dots.length ? dockTop + tuck : vh * 0.62;
     const rects = lite ? null : drawables.map((d) => d.host.getBoundingClientRect());
     const stepRects = steps.map((s) => s.getBoundingClientRect());
     const tops = chapters.map((c) => c.getBoundingClientRect().top);
