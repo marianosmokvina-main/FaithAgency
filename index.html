@@ -1,1286 +1,504 @@
-<!DOCTYPE html>
-<html lang="es">
+<!doctype html>
+<html lang="es" class="no-js">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faith Agency - Contenido y web para negocios que quieren crecer en serio</title>
-<link rel="icon" type="image/png" sizes="512x512" href="faith-ichthys-favicon.png">
-<link rel="apple-touch-icon" href="faith-ichthys-favicon.png">
-<meta name="description" content="Contenido y sitios web para profesionales y pymes que ya tienen un negocio sólido y necesitan que el mundo digital lo refleje.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500;1,600&display=swap" rel="stylesheet">
-<style>
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --bg:#080807;
-  --bg-2:#0d0c0a;
-  --surface:#13120f;
-  --surface-2:#1a1813;
-  --surface-3:#222018;
-  --gold:#c9a84c;
-  --gold-2:#e2c070;
-  --gold-soft:rgba(201,168,76,.12);
-  --gold-line:rgba(201,168,76,.28);
-  --text:#f4efe4;
-  --text-mid:#b4aa98;
-  --text-soft:#756d60;
-  --border:rgba(255,255,255,.075);
-  --border-strong:rgba(255,255,255,.13);
-  --green:#55d6a6;
-  --danger:#ff6542;
-  --shadow:0 24px 80px rgba(0,0,0,.42);
-  --serif:"Playfair Display",Georgia,serif;
-  --sans:"DM Sans",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
-}
-html{scroll-behavior:smooth}
-section,[id]{scroll-margin-top:88px}
-body{
-  min-height:100vh;
-  overflow-x:hidden;
-  background:
-    radial-gradient(circle at 78% 10%,rgba(201,168,76,.12),transparent 32vw),
-    radial-gradient(circle at 12% 42%,rgba(85,214,166,.055),transparent 27vw),
-    linear-gradient(180deg,#080807 0%,#0d0c0a 52%,#080807 100%);
-  color:var(--text);
-  font-family:var(--sans);
-  font-size:16px;
-  line-height:1.6;
-  -webkit-font-smoothing:antialiased;
-  text-rendering:optimizeLegibility;
-}
-body::before{
-  content:"";
-  position:fixed;
-  inset:0;
-  z-index:9999;
-  pointer-events:none;
-  opacity:.024;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
-}
-::selection{background:rgba(201,168,76,.28);color:var(--text)}
-::-webkit-scrollbar{width:4px}
-::-webkit-scrollbar-track{background:var(--bg)}
-::-webkit-scrollbar-thumb{background:var(--gold-line);border-radius:999px}
-a{color:inherit;text-decoration:none}
-button{font:inherit}
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>FaithAgency | Contenido para expertos que venden alto valor</title>
+  <meta name="description" content="Convertimos tus redes y YouTube en un canal de clientes con el Método FAITH. Contenido para expertos que son la cara de su negocio y venden alto valor.">
+  <meta name="theme-color" content="#080807">
+  <link rel="canonical" href="https://faithagency.com.ar/">
 
-.inner{width:min(1160px,100%);margin:0 auto;padding:0 44px}
-.section{position:relative;padding:124px 0}
-.label{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:18px;
-  color:var(--gold-2);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.18em;
-  text-transform:uppercase;
-}
-.label::before{content:"";width:30px;height:1px;background:var(--gold)}
-.section-title{
-  max-width:780px;
-  color:var(--text);
-  font-family:var(--serif);
-  font-size:clamp(34px,5vw,64px);
-  font-weight:700;
-  letter-spacing:-.025em;
-  line-height:1.03;
-}
-.section-title em{color:var(--gold-2);font-style:italic}
-.section-sub{
-  max-width:570px;
-  margin-top:22px;
-  color:var(--text-mid);
-  font-size:17px;
-  font-weight:300;
-  line-height:1.75;
-}
-.rule{width:56px;height:1px;margin:30px 0;background:var(--gold);opacity:.45}
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="FaithAgency">
+  <meta property="og:url" content="https://faithagency.com.ar/">
+  <meta property="og:title" content="Eres el mejor en lo tuyo. Tus redes todavía no lo demuestran.">
+  <meta property="og:description" content="Convertimos tus redes y YouTube en un canal de clientes con el Método FAITH.">
+  <meta property="og:image" content="https://faithagency.com.ar/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
 
-.btn-primary,.btn-secondary,.btn-wa{
-  position:relative;
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:48px;
-  border-radius:999px;
-  cursor:pointer;
-  transition:transform .22s ease,box-shadow .22s ease,background .22s ease,border-color .22s ease,color .22s ease;
-  white-space:nowrap;
-}
-.btn-primary{
-  overflow:hidden;
-  padding:0 28px;
-  border:1px solid rgba(226,192,112,.72);
-  background:linear-gradient(180deg,var(--gold-2),var(--gold));
-  color:#080807;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:.105em;
-  text-transform:uppercase;
-  box-shadow:0 14px 42px rgba(201,168,76,.24),inset 0 1px rgba(255,255,255,.35);
-}
-.btn-primary::after{
-  content:"";
-  position:absolute;
-  inset:-80% -30%;
-  transform:translateX(-64%) rotate(18deg);
-  background:linear-gradient(90deg,transparent,rgba(255,255,255,.42),transparent);
-  transition:transform .7s ease;
-}
-.btn-primary:hover{transform:translateY(-3px) scale(1.018);box-shadow:0 18px 52px rgba(201,168,76,.32)}
-.btn-primary:hover::after{transform:translateX(70%) rotate(18deg)}
-.btn-secondary{
-  gap:8px;
-  min-height:44px;
-  color:var(--text-mid);
-  font-size:13px;
-  font-weight:700;
-}
-.btn-secondary span{transition:transform .2s ease}
-.btn-secondary:hover{color:var(--text)}
-.btn-secondary:hover span{transform:translateX(5px)}
-.btn-wa{
-  gap:9px;
-  padding:0 22px;
-  border:1px solid rgba(85,214,166,.38);
-  background:rgba(85,214,166,.08);
-  color:#bdf4dc;
-  font-size:13px;
-  font-weight:700;
-}
-.btn-wa:hover{transform:translateY(-3px);border-color:rgba(85,214,166,.65);box-shadow:0 14px 42px rgba(85,214,166,.16)}
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/icon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/icon-180.png">
 
-nav{
-  position:fixed;
-  top:0;
-  left:0;
-  right:0;
-  z-index:200;
-  height:74px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 44px;
-  transition:background .3s ease,border-color .3s ease,backdrop-filter .3s ease;
-}
-nav.scrolled{
-  background:rgba(8,8,7,.82);
-  border-bottom:1px solid var(--border);
-  backdrop-filter:blur(18px) saturate(130%);
-}
-.nav-logo{display:flex;align-items:center;gap:10px}
-.logo-mark{
-  width:46px;
-  height:46px;
-  display:grid;
-  place-items:center;
-  border:1px solid var(--gold-line);
-  border-radius:999px;
-  background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015));
-  box-shadow:inset 0 1px rgba(255,255,255,.08);
-}
-.logo-mark img{display:block;width:34px;height:34px;object-fit:contain}
-.nav-links{display:flex;align-items:center;gap:30px;list-style:none}
-.nav-links a{
-  position:relative;
-  padding:5px 0;
-  color:var(--text-mid);
-  font-size:11px;
-  font-weight:700;
-  letter-spacing:.13em;
-  text-transform:uppercase;
-  transition:color .2s ease;
-}
-.nav-links a::after{
-  content:"";
-  position:absolute;
-  left:0;
-  right:0;
-  bottom:-3px;
-  height:1px;
-  transform:scaleX(0);
-  transform-origin:left;
-  background:var(--gold);
-  transition:transform .24s ease;
-}
-.nav-links a:hover{color:var(--text)}
-.nav-links a:hover::after{transform:scaleX(1)}
-.nav-cta{
-  padding:10px 18px;
-  border:1px solid var(--gold-line);
-  border-radius:999px;
-  background:rgba(201,168,76,.1);
-  color:var(--gold-2);
-  font-size:11px;
-  font-weight:800;
-  letter-spacing:.11em;
-  text-transform:uppercase;
-  transition:transform .2s ease,background .2s ease,box-shadow .2s ease;
-}
-.nav-cta:hover{transform:translateY(-2px);background:rgba(201,168,76,.17);box-shadow:0 12px 34px rgba(201,168,76,.18)}
+  <link rel="preload" href="assets/fonts/montserrat-400-700.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/general-sans-600.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="styles.css">
+  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');try{var m=localStorage.getItem('fa-modo');if(m)document.documentElement.classList.add.apply(document.documentElement.classList,m.split(' '));}catch(e){}</script>
+  <script src="script.js" defer></script>
 
-#hero{
-  position:relative;
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  overflow:hidden;
-  padding:132px 0 84px;
-}
-.hero-grid{
-  position:relative;
-  z-index:2;
-  display:grid;
-  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr);
-  gap:68px;
-  align-items:center;
-}
-.hero-tag{
-  opacity:0;
-  animation:rise .75s ease .15s forwards;
-}
-.hero-title{
-  max-width:780px;
-  margin-top:28px;
-  color:var(--text);
-  font-family:var(--serif);
-  font-size:clamp(48px,7vw,92px);
-  font-weight:700;
-  letter-spacing:-.035em;
-  line-height:.99;
-  opacity:0;
-  animation:rise .85s ease .3s forwards;
-}
-.hero-title em{color:var(--gold-2);font-style:italic}
-.hero-sub{
-  max-width:555px;
-  margin-top:30px;
-  color:var(--text-mid);
-  font-size:18px;
-  font-weight:300;
-  line-height:1.72;
-  opacity:0;
-  animation:rise .85s ease .45s forwards;
-}
-.hero-actions{
-  display:flex;
-  align-items:center;
-  gap:24px;
-  flex-wrap:wrap;
-  margin-top:46px;
-  opacity:0;
-  animation:rise .85s ease .6s forwards;
-}
-.hero-orbit{
-  position:absolute;
-  width:760px;
-  height:760px;
-  right:-260px;
-  top:50%;
-  transform:translateY(-50%);
-  border:1px solid rgba(201,168,76,.08);
-  border-radius:50%;
-  pointer-events:none;
-}
-.hero-orbit::before,.hero-orbit::after{
-  content:"";
-  position:absolute;
-  inset:82px;
-  border:1px solid rgba(255,255,255,.045);
-  border-radius:50%;
-}
-.hero-orbit::after{inset:178px;border-color:rgba(85,214,166,.055)}
-
-.ops-panel{
-  position:relative;
-  min-height:560px;
-  opacity:0;
-  animation:panelIn .9s ease .4s forwards;
-}
-.ops-panel::before{
-  content:"";
-  position:absolute;
-  inset:6% 4%;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(201,168,76,.2),transparent 64%);
-  filter:blur(52px);
-}
-.ops-shell{
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--border-strong);
-  border-radius:22px;
-  background:linear-gradient(180deg,rgba(255,255,255,.075),rgba(255,255,255,.018)),rgba(17,16,13,.82);
-  box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.08);
-  backdrop-filter:blur(16px) saturate(120%);
-  transform:translateY(0) scale(1);
-  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease,background .28s ease;
-}
-.ops-shell::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:
-    linear-gradient(90deg,rgba(255,255,255,.04) 1px,transparent 1px),
-    linear-gradient(180deg,rgba(255,255,255,.04) 1px,transparent 1px);
-  background-size:34px 34px;
-  mask-image:linear-gradient(180deg,rgba(0,0,0,.7),transparent 86%);
-  opacity:.7;
-  pointer-events:none;
-}
-.ops-shell::after{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(340px circle at var(--mx,50%) var(--my,40%),rgba(201,168,76,.16),transparent 58%);
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .25s ease;
-}
-.ops-shell:hover{
-  transform:translateY(-6px) scale(1.012);
-  border-color:var(--gold-line);
-  box-shadow:0 30px 90px rgba(0,0,0,.48),0 0 0 1px rgba(201,168,76,.1),inset 0 1px rgba(255,255,255,.1);
-}
-.ops-shell:hover::after{opacity:1}
-.ops-top,.ops-body{position:relative;z-index:1}
-.ops-top{
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:18px 18px 12px;
-  border-bottom:1px solid var(--border);
-}
-.window-dots{
-  order:1;
-  display:flex;
-  align-items:center;
-  gap:7px;
-  flex:0 0 auto;
-  height:18px;
-}
-.window-dots span{display:block;width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,.22)}
-.ops-live{
-  order:2;
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  margin-left:auto;
-  padding:5px 10px;
-  border:1px solid rgba(85,214,166,.26);
-  border-radius:999px;
-  color:#bdf4dc;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.11em;
-  text-transform:uppercase;
-  background:rgba(85,214,166,.08);
-}
-.ops-live::before{
-  content:"";
-  width:7px;
-  height:7px;
-  border-radius:50%;
-  background:var(--green);
-  box-shadow:0 0 0 5px rgba(85,214,166,.08),0 0 18px rgba(85,214,166,.7);
-}
-.ops-body{position:relative;padding:18px}
-.ops-stat{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:10px;
-  align-items:start;
-  margin-bottom:14px;
-  padding:18px;
-  border:1px solid var(--border);
-  border-radius:16px;
-  background:rgba(8,8,7,.42);
-}
-.ops-stat small{
-  color:var(--text-soft);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.ops-stat strong{
-  display:block;
-  margin-top:5px;
-  color:var(--text);
-  font-family:var(--serif);
-  font-size:28px;
-  line-height:1.1;
-}
-.ops-chip{
-  padding:6px 9px;
-  border-radius:999px;
-  background:var(--gold-soft);
-  color:var(--gold-2);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.pipeline{display:grid;gap:10px;margin-top:16px}
-.pipe-row{
-  display:grid;
-  grid-template-columns:130px 1fr auto;
-  gap:12px;
-  align-items:center;
-  padding:13px 14px;
-  border:1px solid var(--border);
-  border-radius:14px;
-  background:rgba(255,255,255,.025);
-}
-.pipe-name{color:var(--text);font-size:13px;font-weight:700}
-.pipe-bar{
-  position:relative;
-  height:7px;
-  overflow:hidden;
-  border-radius:999px;
-  background:rgba(255,255,255,.07);
-}
-.pipe-bar span{
-  position:absolute;
-  inset:0 auto 0 0;
-  width:var(--w);
-  border-radius:inherit;
-  background:linear-gradient(90deg,var(--gold),var(--gold-2));
-  box-shadow:0 0 24px rgba(201,168,76,.28);
-}
-.pipe-status{color:var(--text-soft);font-size:11px;font-weight:700}
-.ops-mini-grid{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:10px;
-  margin-top:14px;
-}
-.ops-mini{
-  min-height:108px;
-  padding:15px;
-  border:1px solid var(--border);
-  border-radius:16px;
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.018));
-}
-.ops-mini small{color:var(--gold-2);font-size:10px;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
-.ops-mini p{margin-top:12px;color:var(--text-mid);font-size:13px;line-height:1.45}
-.floating-note{
-  position:absolute;
-  left:0;
-  top:0;
-  width:190px;
-  padding:14px 15px;
-  border:1px solid rgba(201,168,76,.34);
-  border-radius:15px;
-  background:rgba(13,12,10,.88);
-  box-shadow:0 18px 60px rgba(0,0,0,.35);
-  backdrop-filter:blur(12px);
-  opacity:0;
-  visibility:hidden;
-  pointer-events:none;
-  transform:translate3d(var(--tip-x,0px),var(--tip-y,0px),0) translate(18px,-50%) scale(.96);
-  transition:opacity .18s ease,visibility .18s ease,transform .18s ease;
-  z-index:5;
-}
-.ops-panel.tip-active .floating-note{
-  opacity:1;
-  visibility:visible;
-  transform:translate3d(var(--tip-x,0px),var(--tip-y,0px),0) translate(18px,-50%) scale(1);
-}
-.floating-note span{color:var(--gold-2);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.floating-note p{margin-top:7px;color:var(--text-mid);font-size:12px;line-height:1.45}
-
-#problema,#proceso,#contacto{background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.01));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-.problem-grid,.why-grid{
-  display:grid;
-  grid-template-columns:.92fr 1.08fr;
-  gap:72px;
-  align-items:start;
-}
-.prob-closer{
-  margin-top:30px;
-  color:var(--gold-2);
-  font-family:var(--serif);
-  font-size:22px;
-  font-style:italic;
-}
-.pain-stack{display:grid;gap:14px}
-.pain-card,.service-card,.matrix-card,.why-card,.step-card{
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--border);
-  background:linear-gradient(180deg,rgba(255,255,255,.046),rgba(255,255,255,.014));
-  box-shadow:inset 0 1px rgba(255,255,255,.055);
-  transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease,background .28s ease;
-}
-.pain-card{
-  display:grid;
-  grid-template-columns:72px 1fr;
-  gap:20px;
-  min-height:132px;
-  padding:25px;
-  border-radius:18px;
-}
-.pain-card::before,.service-card::before,.matrix-card::before,.why-card::before,.step-card::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:radial-gradient(260px circle at var(--mx,50%) var(--my,0%),rgba(201,168,76,.14),transparent 58%);
-  opacity:0;
-  pointer-events:none;
-  transition:opacity .25s ease;
-}
-.pain-card > *,.service-card > *,.matrix-card > *,.why-card > *,.step-card > *{position:relative;z-index:1}
-.pain-card:hover,.service-card:hover,.matrix-card:hover,.why-card:hover,.step-card:hover{
-  transform:translateY(-5px);
-  border-color:var(--gold-line);
-  box-shadow:0 22px 70px rgba(0,0,0,.34),0 0 0 1px rgba(201,168,76,.08);
-}
-.pain-card:hover::before,.service-card:hover::before,.matrix-card:hover::before,.why-card:hover::before,.step-card:hover::before{opacity:1}
-.pain-num{
-  color:rgba(201,168,76,.58);
-  font-family:var(--serif);
-  font-size:46px;
-  font-weight:700;
-  line-height:.9;
-}
-.pain-title{
-  color:var(--text);
-  font-family:var(--serif);
-  font-size:21px;
-  font-weight:700;
-  line-height:1.25;
-}
-.pain-desc{margin-top:9px;color:var(--text-mid);font-size:14px;font-weight:300;line-height:1.65}
-
-.service-head{
-  display:grid;
-  grid-template-columns:1fr minmax(260px,420px);
-  gap:46px;
-  align-items:end;
-  margin-bottom:42px;
-}
-.serv-note{
-  padding:16px 18px;
-  border-left:2px solid var(--gold);
-  background:rgba(201,168,76,.055);
-  color:var(--text-mid);
-  font-size:14px;
-  font-style:italic;
-  line-height:1.65;
-}
-.services-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.service-card{
-  min-height:100%;
-  padding:34px;
-  border-radius:20px;
-}
-.service-kicker{
-  display:inline-flex;
-  margin-bottom:22px;
-  padding:6px 10px;
-  border:1px solid var(--gold-line);
-  border-radius:999px;
-  background:var(--gold-soft);
-  color:var(--gold-2);
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.11em;
-  text-transform:uppercase;
-}
-.service-card h3{
-  color:var(--text);
-  font-family:var(--serif);
-  font-size:30px;
-  font-weight:700;
-  letter-spacing:-.02em;
-  line-height:1.1;
-}
-.service-desc{
-  margin-top:16px;
-  padding-bottom:26px;
-  border-bottom:1px solid var(--border);
-  color:var(--text-mid);
-  font-size:15px;
-  font-weight:300;
-  line-height:1.72;
-}
-.feature-list{display:grid;gap:11px;margin:26px 0;list-style:none}
-.feature-list li{display:flex;gap:10px;color:var(--text-mid);font-size:14px;line-height:1.5}
-.feature-list li::before{content:"";width:6px;height:6px;margin-top:8px;border-radius:50%;background:var(--gold);box-shadow:0 0 14px rgba(201,168,76,.55);flex:0 0 auto}
-.service-for{
-  margin-bottom:26px;
-  padding:15px 17px;
-  border:1px solid var(--gold-line);
-  border-radius:14px;
-  background:rgba(201,168,76,.08);
-  color:var(--text);
-  font-size:14px;
-  font-weight:600;
-  line-height:1.55;
-}
-.card-cta{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
-  color:var(--gold-2);
-  font-size:13px;
-  font-weight:800;
-  letter-spacing:.055em;
-  transition:gap .2s ease,color .2s ease;
-}
-.card-cta:hover{gap:14px;color:#f0d48e}
-
-#alcance{padding-top:0}
-.matrix-wrap{
-  display:grid;
-  grid-template-columns:.85fr 1.15fr;
-  gap:32px;
-  align-items:stretch;
-  margin-top:44px;
-}
-.matrix-lede{
-  padding:30px;
-  border:1px solid var(--border);
-  border-radius:20px;
-  background:linear-gradient(180deg,rgba(255,255,255,.04),rgba(255,255,255,.015));
-}
-.matrix-lede h3{
-  color:var(--text);
-  font-family:var(--serif);
-  font-size:30px;
-  line-height:1.12;
-}
-.matrix-lede p{margin-top:18px;color:var(--text-mid);font-size:17px;font-weight:300;line-height:1.78}
-.matrix-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.matrix-card{min-height:170px;padding:24px;border-radius:18px}
-.matrix-card.good{border-color:rgba(85,214,166,.18)}
-.matrix-card.no{border-color:rgba(255,101,66,.24)}
-.matrix-tag{
-  display:inline-flex;
-  align-items:center;
-  gap:7px;
-  margin-bottom:18px;
-  font-size:10px;
-  font-weight:800;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.matrix-tag::before{content:"";width:8px;height:8px;border-radius:50%}
-.good .matrix-tag{color:#bdf4dc}
-.good .matrix-tag::before{background:var(--green)}
-.no .matrix-tag{color:#ff9a78}
-.no .matrix-tag::before{background:var(--danger)}
-.matrix-card h4{color:var(--text);font-family:var(--serif);font-size:20px;line-height:1.2}
-.matrix-card p{margin-top:10px;color:var(--text-mid);font-size:14px;font-weight:300;line-height:1.62}
-
-.process-head{display:flex;align-items:end;justify-content:space-between;gap:34px;margin-bottom:46px}
-.process-head .section-sub{max-width:420px}
-.process-note{margin-top:0;padding:16px 18px;border-left:2px solid var(--gold);background:rgba(201,168,76,.055);color:var(--text-mid);font-size:15px;font-style:italic;line-height:1.65}
-.steps-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
-.step-card{min-height:300px;padding:28px 24px;border-radius:19px}
-.step-card::after{
-  content:"";
-  position:absolute;
-  top:42px;
-  left:24px;
-  right:24px;
-  height:1px;
-  background:linear-gradient(90deg,var(--gold),transparent);
-  opacity:.35;
-}
-.step-num{
-  margin-bottom:54px;
-  color:rgba(201,168,76,.6);
-  font-family:var(--serif);
-  font-size:66px;
-  font-weight:700;
-  line-height:.8;
-}
-.step-name{color:var(--gold-2);font-size:10px;font-weight:800;letter-spacing:.13em;text-transform:uppercase}
-.step-card h4{margin-top:10px;color:var(--text);font-family:var(--serif);font-size:21px;line-height:1.18}
-.step-card p{margin-top:12px;color:var(--text-mid);font-size:14px;font-weight:300;line-height:1.65}
-
-.why-grid{align-items:center}
-.why-list{display:grid;gap:14px}
-.why-card{padding:23px 25px;border-radius:18px}
-.why-card h4{color:var(--text);font-family:var(--serif);font-size:21px;line-height:1.2}
-.why-card p{margin-top:9px;color:var(--text-mid);font-size:14px;font-weight:300;line-height:1.66}
-
-#contacto{padding:132px 0}
-.cta-shell{
-  position:relative;
-  overflow:hidden;
-  border:1px solid var(--border-strong);
-  border-radius:28px;
-  background:
-    radial-gradient(circle at 72% 18%,rgba(201,168,76,.16),transparent 35%),
-    linear-gradient(180deg,rgba(255,255,255,.065),rgba(255,255,255,.018));
-  box-shadow:var(--shadow),inset 0 1px rgba(255,255,255,.08);
-}
-.cta-shell::before{
-  content:"";
-  position:absolute;
-  inset:0;
-  background:linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(180deg,rgba(255,255,255,.035) 1px,transparent 1px);
-  background-size:38px 38px;
-  opacity:.24;
-}
-.cta-content{
-  position:relative;
-  z-index:1;
-  display:grid;
-  grid-template-columns:1fr minmax(320px,420px);
-  gap:42px;
-  padding:54px;
-  align-items:center;
-}
-.cta-content .label{justify-content:flex-start}
-.cta-title{
-  max-width:670px;
-  color:var(--text);
-  font-family:var(--serif);
-  font-size:clamp(36px,5vw,68px);
-  font-weight:700;
-  letter-spacing:-.028em;
-  line-height:1;
-}
-.cta-sub{max-width:560px;margin-top:22px;color:var(--text-mid);font-size:17px;font-weight:300;line-height:1.72}
-.cta-note{margin-top:18px;color:var(--gold-2);font-family:var(--serif);font-size:21px;font-style:italic}
-.cta-actions{display:flex;gap:15px;flex-wrap:wrap;margin-top:34px}
-.calendly-inline-widget{width:100%;max-width:100%;min-width:0!important;overflow:hidden;border-radius:14px}
-.cal-card,.cta-content,.cta-shell{min-width:0;max-width:100%}.cal-card{
-  padding:20px;
-  border:1px solid var(--border);
-  border-radius:20px;
-  background:rgba(8,8,7,.46);
-}
-.cal-card-top{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  margin-bottom:18px;
-}
-.cal-card-top span{color:var(--gold-2);font-size:10px;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
-.cal-dot{width:10px;height:10px;border-radius:50%;background:var(--green);box-shadow:0 0 20px rgba(85,214,166,.75)}
-.cal-placeholder{
-  min-height:330px;
-  display:grid;
-  place-items:center;
-  padding:22px;
-  border:1px dashed rgba(255,255,255,.13);
-  border-radius:16px;
-  background:rgba(255,255,255,.025);
-  text-align:center;
-}
-.cal-placeholder svg{margin:0 auto 14px}
-.cal-placeholder strong{display:block;color:var(--text);font-size:14px}
-.cal-placeholder p{max-width:250px;margin:8px auto 0;color:var(--text-soft);font-size:13px;line-height:1.55}
-.trust-chips{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
-.trust-chips span{
-  padding:7px 10px;
-  border:1px solid var(--border);
-  border-radius:999px;
-  color:var(--text-mid);
-  font-size:11px;
-  font-weight:700;
-}
-
-footer{
-  display:grid;
-  grid-template-columns:1fr auto 1fr;
-  align-items:center;
-  gap:22px;
-  padding:34px 44px;
-  border-top:1px solid var(--border);
-  color:var(--text-soft);
-}
-.footer-left{font-size:11px;letter-spacing:.08em;text-transform:uppercase}
-.footer-logo{display:grid;place-items:center;width:42px;height:42px;margin:0 auto;border:1px solid var(--gold-line);border-radius:999px;background:linear-gradient(180deg,rgba(255,255,255,.05),rgba(255,255,255,.015))}
-.footer-logo img{display:block;width:28px;height:28px;object-fit:contain}
-.footer-links{display:flex;justify-content:flex-end;gap:22px}
-.footer-links a{font-size:12px;font-weight:700;transition:color .2s ease}
-.footer-links a:hover{color:var(--gold-2)}
-.wa-float{
-  position:fixed;
-  right:28px;
-  bottom:28px;
-  z-index:300;
-  width:54px;
-  height:54px;
-  display:grid;
-  place-items:center;
-  border-radius:50%;
-  background:linear-gradient(180deg,var(--gold-2),var(--gold));
-  box-shadow:0 12px 36px rgba(201,168,76,.3),0 0 0 0 rgba(201,168,76,.18);
-  animation:pulse 2.4s ease-in-out infinite;
-  transition:transform .46s cubic-bezier(.22,1,.36,1),box-shadow .46s cubic-bezier(.22,1,.36,1),opacity .38s ease,filter .38s ease,border-radius .46s cubic-bezier(.22,1,.36,1),right .46s cubic-bezier(.22,1,.36,1),bottom .46s cubic-bezier(.22,1,.36,1),width .46s cubic-bezier(.22,1,.36,1),height .46s cubic-bezier(.22,1,.36,1);
-}
-.wa-float:hover{transform:translateY(-3px) scale(1.06);box-shadow:0 18px 46px rgba(201,168,76,.38)}
-.wa-float.is-docked{
-  right:0;
-  bottom:50%;
-  width:46px;
-  height:64px;
-  border-radius:18px 0 0 18px;
-  opacity:.82;
-  transform:translateY(50%) translateX(8px) scale(.92);
-  animation:none;
-  box-shadow:0 14px 40px rgba(201,168,76,.22),inset 0 1px rgba(255,255,255,.32);
-}
-.wa-float.is-docked:hover{
-  opacity:1;
-  transform:translateY(50%) translateX(0) scale(1);
-  box-shadow:0 18px 50px rgba(201,168,76,.34),inset 0 1px rgba(255,255,255,.36);
-}
-.wa-float.is-docked::after{
-  content:"";
-  position:absolute;
-  left:-10px;
-  top:50%;
-  width:4px;
-  height:24px;
-  border-radius:999px;
-  background:rgba(201,168,76,.65);
-  transform:translateY(-50%);
-  box-shadow:0 0 18px rgba(201,168,76,.48);
-}
-
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .72s ease,transform .72s ease}
-.reveal.in{opacity:1;transform:none}
-.d1{transition-delay:.08s}.d2{transition-delay:.16s}.d3{transition-delay:.24s}.d4{transition-delay:.32s}
-@keyframes rise{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
-@keyframes panelIn{from{opacity:0;transform:translateY(28px) scale(.985)}to{opacity:1;transform:none}}
-@keyframes pulse{
-  0%,100%{box-shadow:0 12px 36px rgba(201,168,76,.3),0 0 0 0 rgba(201,168,76,.18)}
-  50%{box-shadow:0 12px 36px rgba(201,168,76,.3),0 0 0 12px rgba(201,168,76,0)}
-}
-
-@media (prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
-}
-@media (max-width:1020px){
-  nav{padding:0 24px}
-  .inner{padding:0 24px}
-  .hero-grid,.problem-grid,.why-grid,.service-head,.matrix-wrap,.cta-content{grid-template-columns:1fr}
-  .hero-grid{gap:44px}
-  .ops-panel{min-height:auto}
-  .floating-note{width:178px}
-  .services-grid{grid-template-columns:1fr}
-  .steps-grid{grid-template-columns:1fr 1fr}
-  .process-head{display:block}
-  .nav-links{display:none}
-}
-@media (max-width:620px){
-  nav{height:68px}
-  .nav-cta{display:none}
-  .section{padding:84px 0}
-  #hero{padding:108px 0 64px}
-  .hero-title{font-size:clamp(44px,14vw,62px)}
-  .hero-actions,.cta-actions{align-items:stretch;flex-direction:column}
-  .btn-primary,.btn-secondary,.btn-wa{width:100%}
-  .ops-body{padding:14px}
-  .pipe-row{grid-template-columns:1fr;gap:8px}
-  .ops-mini-grid,.matrix-grid,.steps-grid{grid-template-columns:1fr}
-  .pain-card{grid-template-columns:1fr}
-  .service-card{padding:26px}
-  #contacto{padding:72px 0}
-  #contacto .inner{padding:0 14px}
-  .cta-shell{border-radius:18px;overflow:visible}
-  .cta-content{padding:22px 14px;gap:26px;width:100%;overflow:hidden}
-  .cta-title{font-size:clamp(34px,11vw,48px)}
-  .cta-sub{font-size:15px;line-height:1.65}
-  .cal-card{padding:10px;border-radius:16px;width:100%;overflow:hidden}
-  .cal-card-top{padding:0 2px;margin-bottom:12px}
-  .calendly-inline-widget{width:100%!important;min-width:0!important;max-width:100%!important;height:680px!important;border-radius:12px;overflow:hidden}
-  .trust-chips{gap:6px}
-  .trust-chips span{font-size:10px;padding:6px 8px}
-  footer{grid-template-columns:1fr;justify-items:center;text-align:center;padding:28px 24px}
-  .footer-links{justify-content:center}
-  .wa-float{right:20px;bottom:20px}
-  .wa-float.is-docked{opacity:0;pointer-events:none;filter:blur(4px) saturate(.8);transform:translateY(28px) scale(.78);transition-duration:.56s}
-}
-</style>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"ProfessionalService","name":"FaithAgency","url":"https://faithagency.com.ar/","logo":"https://faithagency.com.ar/assets/img/icon-512.png","image":"https://faithagency.com.ar/assets/img/og.jpg","description":"Convertimos tus redes y YouTube en un canal de clientes con el Método FAITH.","founder":{"@type":"Person","name":"Mariano"},"areaServed":"Hispanohablantes","sameAs":["https://www.instagram.com/faithagency","https://www.tiktok.com/@byfaithagency"]}
+  </script>
 </head>
 <body>
-<nav id="main-nav">
-  <a href="#hero" class="nav-logo" aria-label="Faith Agency">
-    <span class="logo-mark" aria-hidden="true">
-      <!-- Colocar el PNG del ichthys junto a este index.html: D:\Paginas Web\FaithAgency\faith-ichthys.png
-           Luego reemplazar el placeholder por: <img src="faith-ichthys.png" alt=""> -->
-      <img src="faith-ichthys.png" alt="">
-    </span>
+<a class="skip" href="#contenido">Saltar al contenido</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-pez" viewBox="-12 -12 324 152"><path d="M294 4C266 34 246 52 234 62C196 96 150 120 100 120C46 120 4 94 4 62C4 30 46 4 100 4C150 4 196 28 234 62C246 72 266 92 294 122" fill="none" stroke="currentColor" stroke-width="20" stroke-linecap="round"/></symbol>
+  <symbol id="i-cal" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M8 3v4M16 3v4M3.5 10h17"/></g></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2.2a9.8 9.8 0 0 0-8.4 14.9L2.2 21.8l4.8-1.3A9.8 9.8 0 1 0 12 2.2Zm0 17.8a8 8 0 0 1-4.1-1.1l-.3-.2-2.8.8.8-2.7-.2-.3A8 8 0 1 1 12 20Zm4.4-6c-.2-.1-1.4-.7-1.7-.8-.2-.1-.4-.1-.5.1l-.8.9c-.1.2-.3.2-.5.1a6.6 6.6 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.1 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.5-.4h-.5a.9.9 0 0 0-.7.3 2.8 2.8 0 0 0-.9 2.1 4.9 4.9 0 0 0 1 2.6 11.2 11.2 0 0 0 4.3 3.8c1.6.7 2.2.7 3 .6a2.6 2.6 0 0 0 1.7-1.2 2.1 2.1 0 0 0 .1-1.2c0-.1-.2-.2-.4-.3Z"/></symbol>
+  <symbol id="i-ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.9"><rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.3" cy="6.7" r="1" fill="currentColor" stroke="none"/></g></symbol>
+  <symbol id="i-tt" viewBox="0 0 24 24"><path fill="currentColor" d="M16.6 3h-3.1v12.2a2.7 2.7 0 1 1-2.7-2.7c.3 0 .5 0 .8.1V9.4a5.9 5.9 0 1 0 5 5.8V9a7.6 7.6 0 0 0 4.4 1.4V7.3A4.4 4.4 0 0 1 16.6 3Z"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.6v12.8c0 .8.9 1.3 1.6.9l10-6.4c.6-.4.6-1.3 0-1.7l-10-6.4c-.7-.5-1.6 0-1.6.8Z"/></symbol>
+  <symbol id="i-bat" viewBox="0 0 28 14"><rect x="1" y="1" width="23" height="12" rx="4" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M25.6 4.6c.9.3 1.4 1.2 1.4 2.4s-.5 2.1-1.4 2.4Z" fill="currentColor"/><rect class="bat-lvl" x="3.6" y="3.6" width="17.8" height="6.8" rx="2" fill="currentColor"/></symbol>
+  <symbol id="i-a11y" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="9.6"/><circle cx="12" cy="7.3" r="1.3" fill="currentColor" stroke="none"/><path d="M7.2 9.8q4.8 1.5 9.6 0M12 11v3.2M12 14.2l-2.4 3.9M12 14.2l2.4 3.9"/></g></symbol>
+  <symbol id="i-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+  <symbol id="i-chat" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8.5A3.5 3.5 0 0 1 8.5 5h15A3.5 3.5 0 0 1 27 8.5v10a3.5 3.5 0 0 1-3.5 3.5H14l-6 5v-5h.5A3.5 3.5 0 0 1 5 18.5Z"/><path d="M11 12.5l3.2 3.2L21 9.5"/></g></symbol>
+  <symbol id="i-reloj" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6.2 11.5A11 11 0 1 1 5 16"/><path d="M5 7v4.8h4.8"/><path d="M16 10v6.5l4 2.5"/></g></symbol>
+  <symbol id="i-voz" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M5 14v4M9.5 10.5v11M14 7v18M18.5 11v10M23 13.5v5M27 15.5v1"/></g></symbol>
+</svg>
+
+<header class="hdr">
+  <a class="brand" href="#inicio" aria-label="FaithAgency, ir al inicio">
+    <span class="brand__faith">FAITH</span><span class="brand__agency">AGENCY</span>
   </a>
-  <ul class="nav-links">
-    <li><a href="#problema">El problema</a></li>
-    <li><a href="#servicios">Servicios</a></li>
-    <li><a href="#proceso">Proceso</a></li>
-    <li><a href="#diferencial">Por qué Faith Agency</a></li>
-  </ul>
-  <a href="#contacto" class="nav-cta">Agenda tu llamada</a>
-</nav>
+</header>
 
-<main>
-  <section id="hero">
-    <div class="hero-orbit" aria-hidden="true"></div>
-    <div class="inner hero-grid">
-      <div>
-        <p class="label hero-tag">Para negocios con ambición de crecer</p>
-        <h1 class="hero-title">Tu presencia digital debería <em>hablar</em> tan bien como vos.</h1>
-        <p class="hero-sub">Trabajamos con profesionales y empresas que tienen una propuesta seria y necesitan que el mundo digital la refleje.</p>
-        <div class="hero-actions">
-          <a href="#contacto" class="btn-primary">Agenda tu llamada gratuita</a>
-          <a href="#servicios" class="btn-secondary">Ver qué hacemos <span>→</span></a>
-        </div>
+<main id="contenido">
+
+  <!-- 1 · HERO -->
+  <section class="hero" id="inicio" data-chapter="Inicio">
+    <svg class="hero__fish" viewBox="0 0 330 150" aria-hidden="true" focusable="false">
+      <defs>
+        <linearGradient id="oro" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e2c070"/><stop offset=".55" stop-color="#c9a84c"/><stop offset="1" stop-color="#a8862f"/></linearGradient>
+      </defs>
+      <path class="fish-halo" pathLength="1" d="M294 6C266 36 246 54 234 64C196 98 150 122 100 122C46 122 6 96 6 64C6 32 46 6 100 6C150 6 196 30 234 64C246 74 266 94 294 124"/>
+      <path class="fish-line" pathLength="1" d="M294 6C266 36 246 54 234 64C196 98 150 122 100 122C46 122 6 96 6 64C6 32 46 6 100 6C150 6 196 30 234 64C246 74 266 94 294 124"/>
+    </svg>
+
+    <!-- pulsos de luz que recorren las líneas de la grilla -->
+    <div class="hero__pulses" aria-hidden="true">
+      <i class="p-h" style="--k:1;--t:9s;--dl:2.2s"></i>
+      <i class="p-h" style="--k:2;--t:12s;--dl:5.5s"></i>
+      <i class="p-h p-h--back" style="--k:3;--t:14s;--dl:8s"></i>
+      <i class="p-v" style="--k:4;--t:8s;--dl:3.4s"></i>
+      <i class="p-v" style="--k:2;--t:10s;--dl:6.8s"></i>
+      <i class="p-v p-v--up" style="--k:5;--t:11s;--dl:1.6s"></i>
+    </div>
+
+    <div class="wrap hero__text">
+      <p class="kicker">Contenido para expertos que venden alto valor</p>
+      <h1 class="h1"><span class="ln"><mark class="marker" style="--d:1.05s">Eres el mejor</mark> <span class="nw">en lo tuyo.</span></span> <span class="ln"><mark class="marker" style="--d:1.5s">Tus redes todavía no lo demuestran.</mark></span></h1>
+      <p class="lead">Convertimos tus redes y YouTube en un canal de clientes con el <mark class="marker marker--strong" style="--d:2.05s">Método FAITH</mark>.</p>
+      <div class="hero__actions" id="hero-acciones">
+        <a class="btn btn--gold" href="#agenda" data-agendar>
+          <span class="btn__icon" aria-hidden="true"><svg class="ic-a"><use href="#i-cal"/></svg><svg class="ic-b"><use href="#i-ok"/></svg></span>
+          Agenda tu llamada de 15 minutos
+        </a>
+        <a class="link" href="#es-para-mi">¿No sabes si es para ti? Descúbrelo en 1 minuto</a>
       </div>
+    </div>
+  </section>
 
-      <div class="ops-panel" aria-label="Vista conceptual del sistema de trabajo de Faith Agency">
-        <div class="ops-shell glow-card">
-          <div class="ops-top">
-            <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-            <div class="ops-live">Operación activa</div>
-          </div>
-          <div class="ops-body">
-            <div class="ops-stat">
-              <div>
-                <small>Presencia digital</small>
-                <strong>Contenido + web, ambos trabajando juntos</strong>
-              </div>
-              <span class="ops-chip">Faith</span>
-            </div>
-
-            <div class="pipeline">
-              <div class="pipe-row">
-                <span class="pipe-name">Material en bruto</span>
-                <span class="pipe-bar"><span style="--w:42%"></span></span>
-                <span class="pipe-status">Recibido</span>
-              </div>
-              <div class="pipe-row">
-                <span class="pipe-name">Edición</span>
-                <span class="pipe-bar"><span style="--w:72%"></span></span>
-                <span class="pipe-status">En producción</span>
-              </div>
-              <div class="pipe-row">
-                <span class="pipe-name">Web</span>
-                <span class="pipe-bar"><span style="--w:58%"></span></span>
-                <span class="pipe-status">Conversión</span>
-              </div>
-            </div>
-
-            <div class="ops-mini-grid">
-              <div class="ops-mini">
-                <small>Contenido</small>
-                <p>Redes sociales con criterio visual, narrativa clara y consistencia.</p>
-              </div>
-              <div class="ops-mini">
-                <small>Sitio web</small>
-                <p>Una página diseñada para explicar, generar confianza y convertir.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="floating-note">
-          <span>Sin humo</span>
-          <p>No inventamos métricas, clientes ni estructura. Mostramos cómo trabajamos.</p>
+  <!-- 2 · QUIÉN ESTÁ DETRÁS -->
+  <section class="sec sec--carbon about" id="mariano" data-chapter="Quién está detrás">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <p class="chapter">Quién está detrás</p>
+      <div class="about__grid">
+        <figure class="about__photo">
+          <img src="assets/img/mariano-800.webp" srcset="assets/img/mariano-480.webp 480w, assets/img/mariano-800.webp 800w" sizes="(min-width: 900px) 420px, calc(100vw - 44px)" width="800" height="1000" loading="lazy" decoding="async" alt="Mariano, fundador de FaithAgency">
+        </figure>
+        <div class="about__text">
+          <h2 class="h2">Soy Mariano.</h2>
+          <p class="body">Llevo más de 4 años creando contenido para negocios e instituciones. En ese tiempo vi el mismo error una y otra vez: expertos con un servicio excelente que publican sin un norte claro, prueban de todo a la vez y terminan creyendo que las redes no son para ellos. Creé FaithAgency para cambiar eso.</p>
+          <figure class="quote">
+            <blockquote><p>“Nuestros clientes nos dejan sus cosas porque saben que nuestras manos multiplican lo suyo.”</p></blockquote>
+            <figcaption class="quote__by"><span class="quote__fish" aria-hidden="true"></span>Mariano, fundador de FaithAgency</figcaption>
+          </figure>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="problema" class="section">
-    <div class="inner problem-grid">
-      <div class="reveal">
-        <span class="label">El problema</span>
-        <h2 class="section-title">El problema no es tu negocio. Es cómo se ve desde afuera.</h2>
-        <div class="rule"></div>
-        <p class="section-sub">Tenés un servicio sólido, clientes que te recomiendan y años de experiencia acumulada. Pero en el momento en que alguien que no te conoce entra a tus redes sociales o a tu web, no lo percibe.</p>
-        <p class="prob-closer">Eso es exactamente lo que resolvemos.</p>
-      </div>
-      <div class="pain-stack">
-        <article class="pain-card glow-card reveal d1">
-          <div class="pain-num">01</div>
-          <div>
-            <h3 class="pain-title">La percepción digital importa antes de que empiece cualquier conversación.</h3>
-            <p class="pain-desc">Tus competidores parecen más grandes, aunque tu trabajo sea mejor.</p>
-          </div>
-        </article>
-        <article class="pain-card glow-card reveal d2">
-          <div class="pain-num">02</div>
-          <div>
-            <h3 class="pain-title">Publicás cuando podés, sin línea clara, sin consistencia.</h3>
-            <p class="pain-desc">El contenido existe, pero no está trabajando para vos.</p>
-          </div>
-        </article>
-        <article class="pain-card glow-card reveal d3">
-          <div class="pain-num">03</div>
-          <div>
-            <h3 class="pain-title">Tu web está, pero no convierte a los visitantes en clientes.</h3>
-            <p class="pain-desc">Los visitantes llegan, miran y se van sin hacer nada.</p>
-          </div>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="servicios" class="section">
-    <div class="inner">
-      <div class="service-head reveal">
-        <div>
-          <span class="label">Servicios</span>
-          <h2 class="section-title">Hacemos lo que más impacta tu presencia digital.</h2>
-        </div>
-        <p class="serv-note">Nos encargamos de que tu portada digital, redes sociales y página web, estén a la altura de tu negocio, y de la edición y producción de tu contenido. No hacemos content managing ni account managing, ni desarrollamos la estrategia de comunicación: tomamos lo que ya tenés y lo convertimos en una presencia más clara, sólida y profesional.</p>
-      </div>
-
-      <div class="services-grid">
-        <article class="service-card glow-card reveal d1">
-          <span class="service-kicker">Servicio principal</span>
-          <h3>Contenido que posiciona</h3>
-          <p class="service-desc">Las redes sociales son hoy la primera impresión de cualquier negocio. Editamos tu contenido para que cada publicación comunique autoridad, genere confianza y atraiga al cliente que querés.</p>
-          <ul class="feature-list">
-            <li>Edición profesional de video para tus redes sociales</li>
-            <li>Adaptación del mensaje a tu audiencia y tono de marca</li>
-            <li>Consistencia visual y narrativa entre publicaciones</li>
-            <li>Contenido que se ve bien y que retiene la atención</li>
+  <!-- 3 · RESULTADOS -->
+  <section class="sec sec--noche has-grid results" id="resultados" data-chapter="Resultados">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <p class="chapter">Caso real</p>
+      <div class="results__grid">
+        <div class="results__text">
+          <h2 class="h2">+100 consultas en un mes. Solamente editando vídeos.</h2>
+          <p class="body">Adriana es coach de manifestación. Ella escribía sus guiones y publicaba sus vídeos. Nosotros recibíamos el material en bruto y lo devolvíamos editado para retener. Durante un mes publicamos 3 o 4 vídeos por semana, y entre varios resultados, dos de todos ellos le trajeron más de 100 consultas.</p>
+          <ul class="stats">
+            <li><span class="num">3–4</span><span class="stat__lbl">vídeos por semana</span></li>
+            <li><span class="num">2</span><span class="stat__lbl">vídeos que despegaron</span></li>
+            <li><span class="num">+100</span><span class="stat__lbl">consultas orgánicas</span></li>
           </ul>
-          <p class="service-for">Para el profesional o dueño de negocio que tiene material para mostrar pero le falta el tiempo o el criterio técnico para convertirlo en contenido que realmente funcione.</p>
-          <a href="#contacto" class="card-cta">Hablemos de tu contenido →</a>
-        </article>
+        </div>
+        <figure class="case">
+          <div class="case__frame" data-case>
+            <div class="case__cover" aria-hidden="true">
+              <svg class="case__fish"><use href="#i-pez"/></svg>
+              <span class="case__dur">1:29</span>
+            </div>
+            <button class="case__play" type="button" aria-label="Ver el vídeo del caso con sonido (1 minuto y 29 segundos)">
+              <svg aria-hidden="true"><use href="#i-play"/></svg>
+            </button>
+            <video class="case__vid" playsinline preload="none" width="720" height="1280" data-src="assets/video/caso-adriana-720.mp4"></video>
+          </div>
+          <figcaption class="case__cap">Mariano te cuenta cómo lo hicimos.</figcaption>
+        </figure>
+      </div>
 
-        <article class="service-card glow-card reveal d2">
-          <span class="service-kicker">Servicio secundario</span>
-          <h3>Una web que trabaja mientras vos no estás</h3>
-          <p class="service-desc">Tu sitio web debería ser tu mejor vendedor. Diseñamos y desarrollamos sitios que comunican lo que hacés con claridad, generan confianza desde el primer segundo y convierten visitas en consultas reales.</p>
-          <ul class="feature-list">
-            <li>Diseño orientado a conversión, no solo a estética</li>
-            <li>Copy integrado al diseño desde el inicio</li>
-            <li>Optimización para mobile y velocidad de carga</li>
-            <li>Construida para cumplir tus objetivos</li>
+      <p class="close-line">Y eso fue solo editando sus vídeos. <mark class="marker marker--view">Imagina lo que puede pasar cuando</mark> también <mark class="marker marker--view" style="--d:.75s">nos encargamos de tu estrategia, tus guiones y tu publicación.</mark></p>
+      <a class="btn btn--gold" href="#agenda" data-agendar>
+        <span class="btn__icon" aria-hidden="true"><svg class="ic-a"><use href="#i-cal"/></svg><svg class="ic-b"><use href="#i-ok"/></svg></span>
+        Agenda tu llamada estratégica
+      </a>
+    </div>
+  </section>
+
+  <!-- 4 · EL PROBLEMA -->
+  <section class="sec sec--bronce problem" id="problema" data-chapter="El problema">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <p class="chapter">El problema</p>
+      <div class="problem__head">
+        <h2 class="h2 h2--xl" data-reveal>No te falta disciplina. <mark class="marker marker--view" style="--d:.9s">Te falta un sistema.</mark></h2>
+        <p class="body">Casi siempre, detrás de unas redes que no venden hay una de estas ideas.</p>
+      </div>
+      <ul class="myths">
+        <li class="myth">
+          <div class="myth__side myth__side--mito"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-x"/></svg>Mito</p><p class="myth__txt">Más visitas es igual a más clientes</p></div>
+          <div class="myth__side myth__side--real"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-ok"/></svg>Realidad</p><p class="myth__true">Pocas visitas de la persona correcta valen más que miles de curiosos.</p></div>
+        </li>
+        <li class="myth">
+          <div class="myth__side myth__side--mito"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-x"/></svg>Mito</p><p class="myth__txt">Tienes que publicar todos los días</p></div>
+          <div class="myth__side myth__side--real"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-ok"/></svg>Realidad</p><p class="myth__true">Lo que más importa es la constancia, y que cada vídeo tenga un objetivo claro.</p></div>
+        </li>
+        <li class="myth">
+          <div class="myth__side myth__side--mito"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-x"/></svg>Mito</p><p class="myth__txt">El problema es la edición</p></div>
+          <div class="myth__side myth__side--real"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-ok"/></svg>Realidad</p><p class="myth__true">Antes de editar, decidimos a quién le hablas.</p></div>
+        </li>
+        <li class="myth">
+          <div class="myth__side myth__side--mito"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-x"/></svg>Mito</p><p class="myth__txt">Para crecer tienes que parecer un tiktoker</p></div>
+          <div class="myth__side myth__side--real"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-ok"/></svg>Realidad</p><p class="myth__true">Tu contenido suena a ti, con tu forma de hablar.</p></div>
+        </li>
+        <li class="myth">
+          <div class="myth__side myth__side--mito"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-x"/></svg>Mito</p><p class="myth__txt">Tienes que hacerlo todo tú</p></div>
+          <div class="myth__side myth__side--real"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-ok"/></svg>Realidad</p><p class="myth__true">Las grandes marcas personales delegan para dedicarse a lo que importa: vender y hacer crecer su negocio.</p></div>
+        </li>
+        <li class="myth">
+          <div class="myth__side myth__side--mito"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-x"/></svg>Mito</p><p class="myth__txt">Los buenos clientes solo llegan por recomendación</p></div>
+          <div class="myth__side myth__side--real"><p class="myth__tag"><svg aria-hidden="true"><use href="#i-ok"/></svg>Realidad</p><p class="myth__true">La recomendación es un canal. Tus redes pueden ser otro: cuantos más canales, mejor.</p></div>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5 · PARA QUIÉN ES -->
+  <section class="sec sec--noche has-grid who" id="para-quien" data-chapter="Para quién es">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <p class="chapter">Para quién es</p>
+      <div class="who__grid">
+        <div class="who__main">
+          <h2 class="h2"><mark class="marker marker--view">Para expertos</mark> que son la cara de su negocio.</h2>
+          <ul class="checks">
+            <li>Vendes alto valor: mentorías, consultorías, programas o servicios B2B.</li>
+            <li>Tienes el conocimiento y los resultados. Falta que se vean.</li>
+            <li>Estás dispuesto a salir en cámara y contar lo que sabes.</li>
           </ul>
-          <p class="service-for">Para el negocio que no tiene web, tiene una desactualizada, o tiene una que existe pero no genera nada.</p>
-          <a href="#contacto" class="card-cta">Hablemos de tu web →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <section id="alcance" class="section">
-    <div class="inner">
-      <div class="reveal">
-        <span class="label">Alcance claro</span>
-        <h2 class="section-title">Saber qué no hacemos también es parte del criterio.</h2>
-      </div>
-      <div class="matrix-wrap">
-        <div class="matrix-lede reveal d1">
-          <h3>Menos promesa. Más precisión.</h3>
-          <p>Trabajamos sobre lo que el cliente realmente ve primero: tus redes, tu web y la forma en que tu propuesta se presenta antes de cualquier llamada. La idea no es decorar una marca; es ordenar la percepción, elevar la confianza y hacer que cada punto de contacto empuje en la misma dirección.</p>
         </div>
-        <div class="matrix-grid">
-          <article class="matrix-card good glow-card reveal d1">
-            <span class="matrix-tag">Hacemos</span>
-            <h4>Edición y producción de contenido</h4>
-            <p>Convertimos tu material en publicaciones con calidad, intención y consistencia.</p>
-          </article>
-          <article class="matrix-card no glow-card reveal d2">
-            <span class="matrix-tag">No hacemos</span>
-            <h4>Content managing ni account managing</h4>
-            <p>No administramos tu cuenta ni reemplazamos tu estrategia de comunicación.</p>
-          </article>
-          <article class="matrix-card good glow-card reveal d3">
-            <span class="matrix-tag">Hacemos</span>
-            <h4>Sitios orientados a conversión</h4>
-            <p>Diseñamos para que el visitante entienda, confíe y dé el siguiente paso.</p>
-          </article>
-          <article class="matrix-card no glow-card reveal d4">
-            <span class="matrix-tag">No hacemos</span>
-            <h4>Promesas infladas ni métricas inventadas</h4>
-            <p>Preferimos decir menos y sostener más: cada promesa tiene que poder verse en la forma de trabajar, en la entrega y en la claridad del proceso.</p>
-          </article>
+        <div class="who__side">
+          <ul class="profiles" aria-label="Perfiles">
+            <li>Coaches</li><li>Terapeutas</li><li>Infoproductores</li><li>Consultores</li><li>Asesores inmobiliarios</li>
+          </ul>
+          <a class="link" href="#es-para-mi">¿No sabes si encajas? Descúbrelo en 1 minuto</a>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="proceso" class="section">
-    <div class="inner">
-      <div class="process-head reveal">
-        <div>
-          <span class="label">Proceso</span>
-          <h2 class="section-title">Simple, directo y sin vueltas.</h2>
-        </div>
-        <p class="section-sub process-note">Así es cada proyecto desde el primer contacto hasta la entrega.</p>
-      </div>
-      <div class="steps-grid">
-        <article class="step-card glow-card reveal d1">
-          <div class="step-num">01</div>
-          <span class="step-name">Primer contacto</span>
-          <h4>Llamada de diagnóstico</h4>
-          <p>Entendemos tu negocio, tu situación actual y qué necesitás resolver.</p>
-        </article>
-        <article class="step-card glow-card reveal d2">
-          <div class="step-num">02</div>
-          <span class="step-name">Propuesta</span>
-          <h4>A medida, no de plantilla</h4>
-          <p>Te decimos qué haríamos, por qué y con qué alcance concreto.</p>
-        </article>
-        <article class="step-card glow-card reveal d3">
-          <div class="step-num">03</div>
-          <span class="step-name">Ejecución</span>
-          <h4>Producción directa</h4>
-          <p>Trabajamos sobre tu contenido o tu web con comunicación clara durante el proceso.</p>
-        </article>
-        <article class="step-card glow-card reveal d4">
-          <div class="step-num">04</div>
-          <span class="step-name">Cierre</span>
-          <h4>Entrega y ajuste</h4>
-          <p>Entregamos, revisamos y ajustamos lo necesario para que quede listo.</p>
-        </article>
-      </div>
+  <!-- 6 · LO QUE GANAS -->
+  <section class="sec sec--carbon gains" id="beneficios" data-chapter="Lo que ganas">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <p class="chapter">Lo que ganas</p>
+      <h2 class="h2">Tu contenido trabaja mientras tú atiendes tu negocio.</h2>
+      <ul class="gain-list">
+        <li class="gain">
+          <span class="gain__icon" aria-hidden="true"><svg class="ic-a"><use href="#i-chat"/></svg><svg class="ic-b"><use href="#i-ok"/></svg></span>
+          <h3 class="h3">Tus redes te traen clientes.</h3>
+          <p class="body">Cada vídeo tiene un objetivo: que la persona correcta te escriba. Las recomendaciones dejan de ser tu única fuente.</p>
+        </li>
+        <li class="gain">
+          <span class="gain__icon" aria-hidden="true"><svg class="ic-a"><use href="#i-reloj"/></svg><svg class="ic-b"><use href="#i-ok"/></svg></span>
+          <h3 class="h3">Tu tiempo vuelve a tus clientes.</h3>
+          <p class="body">Dejas de perder horas pensando qué publicar o editando de noche.</p>
+        </li>
+        <li class="gain">
+          <span class="gain__icon" aria-hidden="true"><svg class="ic-a"><use href="#i-voz"/></svg><svg class="ic-b"><use href="#i-ok"/></svg></span>
+          <h3 class="h3">Contenido que suena a ti.</h3>
+          <p class="body">Documentamos cómo hablas para que cada vídeo muestre tu nivel real, sin plantillas copiadas de tu competencia.</p>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section id="diferencial" class="section">
-    <div class="inner why-grid">
-      <div class="reveal">
-        <span class="label">Por qué Faith Agency</span>
-        <h2 class="section-title">Lo que nos define no es lo que decimos. Es cómo trabajamos.</h2>
-        <p class="section-sub">Cuatro cosas que vas a notar desde el primer contacto.</p>
-        <div class="rule"></div>
-        <a href="#contacto" class="btn-primary">Agenda tu llamada gratuita</a>
+  <!-- 7 · MÉTODO FAITH -->
+  <section class="sec sec--bg2 method" id="metodo" data-chapter="El método">
+    <div class="method__glow" aria-hidden="true"></div>
+    <div class="wrap">
+      <div class="method__head">
+        <span class="rail rail--in rail--a" aria-hidden="true"><i></i></span>
+        <p class="chapter">Cómo lo hacemos</p>
+        <h2 class="h2">El Método FAITH</h2>
+        <p class="body method__intro">Empezamos por a quién le hablas y cómo suenas. La edición viene después.</p>
       </div>
-      <div class="why-list">
-        <article class="why-card glow-card reveal d1">
-          <h4>Foco total en lo que hacemos. Y nada más.</h4>
-          <p>Contenido y web. No hacemos todo para todos. Esa concentración es la razón por la que cada proyecto recibe atención real, no dividida.</p>
-        </article>
-        <article class="why-card glow-card reveal d2">
-          <h4>Hablás directo con quien ejecuta tu proyecto.</h4>
-          <p>No hay intermediarios. La persona que te atiende es la misma que produce tu contenido o construye tu web. Sin filtros, sin demoras.</p>
-        </article>
-        <article class="why-card glow-card reveal d3">
-          <h4>Claridad antes que cualquier promesa.</h4>
-          <p>Si lo que necesitás no entra en lo que hacemos, te lo decimos desde el primer momento. El tiempo de ambos es demasiado valioso para proyectos que no van a funcionar.</p>
-        </article>
-        <article class="why-card glow-card reveal d4">
-          <h4>Tu negocio puede ser chico o mediano. Los resultados, no.</h4>
-          <p>Trabajamos con la misma exigencia y criterio que una operación corporativa. Sin la burocracia, sin los tiempos muertos, sin los costos que eso implica.</p>
-        </article>
-      </div>
-    </div>
-  </section>
 
-  <section id="contacto">
-    <div class="inner">
-      <div class="cta-shell reveal">
-        <div class="cta-content">
-          <div>
-            <span class="label">Contacto</span>
-            <h2 class="cta-title">El primer paso es una conversación.</h2>
-            <p class="cta-sub">Sin formularios largos. Sin presión. Solo una llamada para entender si podemos ayudarte y cómo.</p>
-            <p class="cta-note">Sin compromisos.</p>
-            <div class="cta-actions">
-              <a href="#calendly" class="btn-primary">Agenda tu llamada gratuita</a>
-              <a href="https://wa.link/4ywufq" class="btn-wa" target="_blank" rel="noopener">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-                Escribinos por WhatsApp
-              </a>
+      <div class="faith-wrap">
+        <svg class="elbow elbow--in" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M1.5 0C1.5 24 98.5 16 98.5 40"/></svg>
+        <span class="faith__line" aria-hidden="true"><i></i></span>
+        <ol class="faith">
+          <li class="step" data-step>
+            <span class="step__letter" aria-hidden="true"><i class="step__aura"></i><span>F</span></span>
+            <div class="step__body">
+              <h3 class="h3">Foco</h3>
+              <p class="body">Definimos a quién le hablas, qué le vendes y qué formato funciona en tu nicho.</p>
+              <svg class="beam" aria-hidden="true"><path class="beam__glow" pathLength="100"/><path class="beam__line" pathLength="100"/></svg>
             </div>
-            <div class="trust-chips">
-              <span>Llamada gratuita</span>
-              <span>Sin compromiso</span>
-              <span>Respuesta directa</span>
+          </li>
+          <li class="step" data-step>
+            <span class="step__letter" aria-hidden="true"><i class="step__aura"></i><span>A</span></span>
+            <div class="step__body">
+              <h3 class="h3">Autenticidad</h3>
+              <p class="body">Documentamos tu historia y tu forma de hablar para que cada vídeo suene a ti.</p>
+              <svg class="beam" aria-hidden="true"><path class="beam__glow" pathLength="100"/><path class="beam__line" pathLength="100"/></svg>
             </div>
+          </li>
+          <li class="step" data-step>
+            <span class="step__letter" aria-hidden="true"><i class="step__aura"></i><span>I</span></span>
+            <div class="step__body">
+              <h3 class="h3">Impacto</h3>
+              <p class="body">Las ideas y los guiones los ponemos nosotros. Grabas con guía y editamos para retener.</p>
+              <svg class="beam" aria-hidden="true"><path class="beam__glow" pathLength="100"/><path class="beam__line" pathLength="100"/></svg>
+            </div>
+          </li>
+          <li class="step" data-step>
+            <span class="step__letter" aria-hidden="true"><i class="step__aura"></i><span>T</span></span>
+            <div class="step__body">
+              <h3 class="h3">Tracción</h3>
+              <p class="body">Publicamos con constancia en Instagram, TikTok y YouTube, y repetimos lo que funciona.</p>
+              <svg class="beam" aria-hidden="true"><path class="beam__glow" pathLength="100"/><path class="beam__line" pathLength="100"/></svg>
+            </div>
+          </li>
+          <li class="step" data-step>
+            <span class="step__letter" aria-hidden="true"><i class="step__aura"></i><span>H</span></span>
+            <div class="step__body">
+              <h3 class="h3">Hablar</h3>
+              <p class="body">Cada vídeo invita a escribirte. Las visitas se convierten en conversaciones, y las conversaciones, en clientes.</p>
+              <svg class="beam" aria-hidden="true"><path class="beam__glow" pathLength="100"/><path class="beam__line" pathLength="100"/></svg>
+            </div>
+          </li>
+        </ol>
+        <svg class="elbow elbow--out" viewBox="0 0 100 40" preserveAspectRatio="none" aria-hidden="true"><path pathLength="1" d="M98.5 0C98.5 24 1.5 16 1.5 40"/></svg>
+      </div>
+
+      <div class="method__foot">
+        <span class="rail rail--in rail--b" aria-hidden="true"><i></i></span>
+        <p class="note">¿Solo necesitas una parte? <mark class="marker marker--view">Armamos tu propuesta según lo que necesites.</mark></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8 · NUESTRO COMPROMISO -->
+  <section class="sec sec--carbon pledge" id="compromiso" data-chapter="Nuestro compromiso">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <p class="chapter">Nuestro compromiso</p>
+      <div class="promise glass">
+        <svg class="promise__seal" aria-hidden="true"><use href="#i-pez"/></svg>
+        <h2 class="h2">Si no cumplimos, lo compensamos.</h2>
+        <p class="body">Entregamos lo que acordamos. No prometemos lo que no podemos lograr ni medir: todo se acuerda entre las dos partes, sin letra pequeña.</p>
+      </div>
+      <a class="btn btn--gold" href="#agenda" data-agendar>
+        <span class="btn__icon" aria-hidden="true"><svg class="ic-a"><use href="#i-cal"/></svg><svg class="ic-b"><use href="#i-ok"/></svg></span>
+        Agenda tu llamada estratégica
+      </a>
+    </div>
+  </section>
+
+  <!-- 9 · ¿ES PARA MÍ? -->
+  <section class="sec sec--bronce quiz-sec" id="es-para-mi" data-chapter="¿Es para mí?">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <div class="quiz-head">
+        <h2 class="h2 node">¿Es para mí?</h2>
+        <p class="body">4 preguntas, 1 minuto. Te decimos con honestidad si podemos ayudarte.</p>
+      </div>
+
+      <div class="quiz glass" data-quiz>
+        <div class="quiz__progress" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
+        <p class="vh" aria-live="polite" data-quiz-status></p>
+        <form class="quiz__form" novalidate>
+          <fieldset class="quiz__step" data-q="1">
+            <legend class="quiz__q">¿Eres la cara visible de tu negocio?</legend>
+            <label class="opt"><input type="radio" name="q1" value="a"><span>Sí</span></label>
+            <label class="opt"><input type="radio" name="q1" value="b"><span>Es de un equipo</span></label>
+            <label class="opt"><input type="radio" name="q1" value="c"><span>Todavía no tengo negocio</span></label>
+          </fieldset>
+          <fieldset class="quiz__step" data-q="2">
+            <legend class="quiz__q">¿Qué vendes?</legend>
+            <label class="opt"><input type="radio" name="q2" value="a"><span>Mentorías, consultorías o programas</span></label>
+            <label class="opt"><input type="radio" name="q2" value="b"><span>Servicios B2B</span></label>
+            <label class="opt"><input type="radio" name="q2" value="c"><span>Productos o sesiones de bajo precio</span></label>
+            <label class="opt"><input type="radio" name="q2" value="d"><span>Otro</span></label>
+          </fieldset>
+          <fieldset class="quiz__step" data-q="3">
+            <legend class="quiz__q">¿Estás dispuesto a grabarte?</legend>
+            <label class="opt"><input type="radio" name="q3" value="a"><span>Sí</span></label>
+            <label class="opt"><input type="radio" name="q3" value="b"><span>Con ayuda, sí</span></label>
+            <label class="opt"><input type="radio" name="q3" value="c"><span>No quiero salir en cámara</span></label>
+          </fieldset>
+          <fieldset class="quiz__step" data-q="4">
+            <legend class="quiz__q">¿Qué te frena hoy?</legend>
+            <label class="opt"><input type="radio" name="q4" value="a"><span>No tengo tiempo</span></label>
+            <label class="opt"><input type="radio" name="q4" value="b"><span>No sé qué publicar</span></label>
+            <label class="opt"><input type="radio" name="q4" value="c"><span>Publico pero no vende</span></label>
+            <label class="opt"><input type="radio" name="q4" value="d"><span>Dependo de las recomendaciones</span></label>
+          </fieldset>
+          <div class="quiz__nav">
+            <button class="quiz__back" type="button" data-quiz-back>Atrás</button>
           </div>
-          <div class="cal-card" id="calendly">
-            <div class="cal-card-top">
-              <span>Agenda</span>
-              <i class="cal-dot" aria-hidden="true"></i>
-            </div>
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/marianosmokvina/faith-agency-strategic-call?hide_event_type_details=1" style="min-width:0;width:100%;height:700px;"></div>
-            <!-- Calendly inline widget end -->
+        </form>
+
+        <div class="quiz__result" data-result="A" hidden tabindex="-1">
+          <h3 class="quiz__title"><svg class="quiz__ok" aria-hidden="true"><use href="#i-ok"/></svg>Esto es para ti.</h3>
+          <p class="body" data-frase></p>
+          <div class="quiz__actions">
+            <a class="btn btn--gold" href="#agenda" data-agendar>Agenda tu llamada de 15 minutos</a>
+            <a class="link" href="#" data-wa-quiz target="_blank" rel="noopener">Prefiero escribir por WhatsApp</a>
+          </div>
+        </div>
+
+        <div class="quiz__result" data-result="B" hidden tabindex="-1">
+          <h3 class="quiz__title">Puede que sí. Veamos tu caso.</h3>
+          <p class="body">Tu situación tiene matices, y preferimos verla contigo antes de decirte que sí o que no.</p>
+          <div class="quiz__faqs" data-quiz-faqs></div>
+          <div class="quiz__actions">
+            <a class="btn btn--wa" href="#" data-wa-quiz target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Escríbenos por WhatsApp</a>
+            <a class="link" href="#agenda" data-agendar>Agenda tu llamada de 15 minutos</a>
+          </div>
+        </div>
+
+        <div class="quiz__result" data-result="C" hidden tabindex="-1">
+          <h3 class="quiz__title">Hoy no somos lo que más te va a ayudar.</h3>
+          <p class="body">Nuestro sistema funciona cuando el experto se graba y vende alto valor. En Instagram compartimos lo que funciona para crecer con contenido; síguenos, y cuando llegue el momento, aquí estaremos.</p>
+          <p class="body">¿Crees que tu caso es distinto? Escríbenos y lo vemos juntos.</p>
+          <div class="quiz__actions quiz__actions--even">
+            <a class="btn btn--wa" href="#" data-wa-quiz target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Escríbenos por WhatsApp</a>
+            <a class="btn btn--line" href="https://www.instagram.com/faithagency" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Seguir en Instagram</a>
+          </div>
+        </div>
+
+        <button class="quiz__restart" type="button" data-quiz-restart hidden>Volver a empezar</button>
+        <noscript><p class="body">Para hacer el test necesitas activar JavaScript. También puedes escribirnos por <a href="https://wa.me/5492478577335?text=Hola%2C%20vengo%20de%20la%20web%20de%20FaithAgency%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s.">WhatsApp</a>.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- 10 · PREGUNTAS FRECUENTES -->
+  <section class="sec sec--noche has-grid faq" id="preguntas" data-chapter="Preguntas">
+    <div class="wrap rail-wrap">
+      <span class="rail" aria-hidden="true"><i></i></span>
+      <h2 class="h2 node">Preguntas frecuentes</h2>
+      <div class="faq__list">
+        <details class="faq__item" id="faq-inversion"><summary>¿Y si invierto y no recupero la inversión?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Es la duda más lógica antes de invertir. Por eso trabajamos solo con expertos que venden alto valor, y en la llamada vemos tus números para decirte con honestidad si tiene sentido para ti.</p></div></details>
+        <details class="faq__item" id="faq-nicho"><summary>¿Vas a entender mi nicho o me vas a hacer ver como un tiktoker más?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Es la preocupación más habitual entre expertos. Antes de grabar documentamos tu historia y tu forma de hablar, para que cada vídeo suene a ti y no a una plantilla.</p></div></details>
+        <details class="faq__item" id="faq-ventas"><summary>¿Y si consigo visitas pero ninguna venta?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Es lo que les pasa a muchos expertos que publican sin estrategia. Por eso no perseguimos la viralidad: cada vídeo tiene un objetivo y una invitación clara a escribirte.</p></div></details>
+        <details class="faq__item" id="faq-encima"><summary>¿Voy a tener que estar encima de ustedes?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>No. Es una de las dudas más comunes, sobre todo si ya trabajaste con un equipo antes. Tú te dedicas a tu negocio y siempre sabes cómo van tus números.</p></div></details>
+        <details class="faq__item" id="faq-tiempo"><summary>¿Cuánto tiempo me lleva a mí?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Solo el tiempo de grabarte, en fechas que acordamos para que no choquen con tu trabajo.</p></div></details>
+        <details class="faq__item" id="faq-editores"><summary>Ya trabajé con editores y no funcionó. ¿Por qué ahora sería distinto?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Es más común de lo que parece: muchos expertos llegan después de probar con freelancers. La diferencia está en el orden: empezamos por la estrategia y tu voz, y la edición viene después.</p></div></details>
+        <details class="faq__item" id="faq-precio"><summary>¿Cuánto cuesta?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Depende de lo que necesites. No vendemos paquetes cerrados: en la llamada vemos tu caso y armamos una propuesta a tu medida.</p></div></details>
+        <details class="faq__item" id="faq-resultados"><summary>¿Cuándo veo resultados?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Desde el primer mes tu contenido sale con constancia. Cuándo llegan las consultas depende de tu punto de partida, y en la llamada te damos una estimación honesta para tu caso.</p></div></details>
+        <details class="faq__item" id="faq-parte"><summary>¿Puedo contratar solo una parte, como la edición?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Sí. Armamos la propuesta según lo que necesites.</p></div></details>
+        <details class="faq__item" id="faq-pais"><summary>¿Trabajan con clientes de mi país?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>Sí. Trabajamos en español con expertos de cualquier país, en dólares o euros.</p></div></details>
+        <details class="faq__item" id="faq-llamada"><summary>¿Qué pasa en la llamada?<span class="plus" aria-hidden="true"></span></summary><div class="faq__a"><p>En 15 minutos conocemos tu negocio y lo que quieres conseguir, y te decimos con honestidad si podemos ayudarte.</p></div></details>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 · CIERRE + AGENDA (Calendly dentro de la página) -->
+  <section class="sec sec--carbon has-grid has-grid--glow closing" id="agenda" data-chapter="Agenda">
+    <div class="wrap">
+      <div class="closing__head">
+        <span class="rail rail--in rail--end" aria-hidden="true"><i></i></span>
+        <h2 class="h2 h2--xl node">Hablemos 15 minutos de tu negocio.</h2>
+        <p class="body closing__lead">Vemos tu cuenta, lo que quieres conseguir y si podemos ayudarte. Si no encajamos, te lo decimos.</p>
+      </div>
+      <div class="agenda">
+        <span class="knot" aria-hidden="true"><svg><use href="#i-pez"/></svg></span>
+        <div class="calendly-slot" data-calendly-slot data-state="idle" role="region" aria-label="Calendario para elegir día y hora">
+          <div class="calendly-slot__msg" data-calendly-msg>
+            <svg aria-hidden="true"><use href="#i-cal"/></svg>
+            <p>Cargando el calendario…</p>
+            <noscript><p><a href="https://calendly.com/marianosmokvina/faith-agency-strategic-call">Elegir día y hora en Calendly</a></p></noscript>
           </div>
         </div>
       </div>
+      <a class="link closing__wa" href="https://wa.me/5492478577335?text=Hola%2C%20vengo%20de%20la%20web%20de%20FaithAgency%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s." target="_blank" rel="noopener">¿Prefieres escribir? Háblanos por WhatsApp</a>
+      <p class="closing__promise">Lo que acordamos, lo cumplimos. Sin letra pequeña.</p>
     </div>
   </section>
 </main>
 
-<footer>
-  <span class="footer-left">© 2026 Faith Agency</span>
-  <a href="#hero" class="footer-logo" aria-label="Faith Agency"><img src="faith-ichthys.png" alt=""></a>
-  <div class="footer-links">
-    <a href="https://www.instagram.com/faithagency_/" target="_blank" rel="noopener">Instagram</a>
-    <a href="https://wa.link/4ywufq" target="_blank" rel="noopener">WhatsApp</a>
+<!-- 12 · PIE -->
+<footer class="foot">
+  <div class="wrap foot__inner">
+    <a class="foot__logo" href="#inicio"><img src="assets/img/logo-360.webp" width="360" height="278" loading="lazy" decoding="async" alt="FaithAgency"></a>
+    <ul class="foot__links">
+      <li><a href="https://www.instagram.com/faithagency" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-ig"/></svg>Instagram <span>@faithagency</span></a></li>
+      <li><a href="https://www.tiktok.com/@byfaithagency" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-tt"/></svg>TikTok <span>@byfaithagency</span></a></li>
+      <li><a href="https://wa.me/5492478577335?text=Hola%2C%20vengo%20de%20la%20web%20de%20FaithAgency%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a></li>
+    </ul>
+    <p class="foot__legal">© 2026 FaithAgency · faithagency.com.ar</p>
   </div>
+  <p class="foot__giant" aria-hidden="true">FAITH</p>
 </footer>
 
-<a href="https://wa.link/4ywufq" class="wa-float" aria-label="WhatsApp" target="_blank" rel="noopener">
-  <svg width="22" height="22" viewBox="0 0 24 24" fill="#080807" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-</a>
+<!-- PUNTOS DEL CAMINO: siempre visibles abajo a la izquierda (los crea script.js) -->
+<div class="dock" aria-hidden="true" data-dock>
+  <span class="dock__track"></span>
+</div>
 
-<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-<script>
-const nav = document.getElementById("main-nav");
-window.addEventListener("scroll", () => {
-  nav.classList.toggle("scrolled", window.scrollY > 60);
-}, {passive:true});
-
-const reveals = document.querySelectorAll(".reveal");
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if(entry.isIntersecting){
-      entry.target.classList.add("in");
-      observer.unobserve(entry.target);
-    }
-  });
-}, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
-reveals.forEach((el) => observer.observe(el));
-
-document.querySelectorAll(".glow-card").forEach((card) => {
-  card.addEventListener("pointermove", (event) => {
-    const rect = card.getBoundingClientRect();
-    card.style.setProperty("--mx", `${event.clientX - rect.left}px`);
-    card.style.setProperty("--my", `${event.clientY - rect.top}px`);
-  });
-});
-
-const opsPanel = document.querySelector(".ops-panel");
-const opsShell = document.querySelector(".ops-shell");
-if(opsPanel && opsShell){
-  const moveNote = (event) => {
-    const rect = opsPanel.getBoundingClientRect();
-    opsPanel.style.setProperty("--tip-x", `${event.clientX - rect.left}px`);
-    opsPanel.style.setProperty("--tip-y", `${event.clientY - rect.top}px`);
-  };
-  opsShell.addEventListener("pointerenter", (event) => {
-    moveNote(event);
-    opsPanel.classList.add("tip-active");
-  });
-  opsShell.addEventListener("pointermove", moveNote);
-  opsShell.addEventListener("pointerleave", () => {
-    opsPanel.classList.remove("tip-active");
-  });
-}
-
-const floatingWhatsApp = document.querySelector(".wa-float");
-const contactSection = document.getElementById("contacto");
-const pageFooter = document.querySelector("footer");
-if(floatingWhatsApp && (contactSection || pageFooter)){
-  const dockState = new Map();
-  const setDocked = () => {
-    floatingWhatsApp.classList.toggle("is-docked", [...dockState.values()].some(Boolean));
-  };
-  const dockObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => dockState.set(entry.target, entry.isIntersecting));
-    setDocked();
-  }, {threshold:.18, rootMargin:"0px 0px -12% 0px"});
-  [contactSection, pageFooter].filter(Boolean).forEach((el) => dockObserver.observe(el));
-}
-</script>
+<!-- ISLA -->
+<nav class="island" aria-label="Capítulos de la página" data-island>
+  <div class="island__bar">
+    <button class="island__toggle" type="button" aria-expanded="false" aria-controls="isla-panel" data-island-toggle>
+      <svg class="island__fish" aria-hidden="true"><use href="#i-pez"/></svg>
+      <span class="island__chapter" data-island-chapter>Inicio</span>
+      <span class="island__count" data-island-count>1/11</span>
+    </button>
+    <a class="island__cta" href="#agenda" data-agendar>Agendar llamada</a>
+  </div>
+  <div class="island__panel" id="isla-panel" data-island-panel hidden>
+    <div class="island__top">
+      <p class="island__clock">Mariano · Argentina · <time data-clock>--:--</time></p>
+      <div class="island__modes">
+        <button class="mode" type="button" data-mode="lite" aria-pressed="false" title="Apaga las animaciones para que la web vaya más ligera">
+          <svg class="mode__bat" aria-hidden="true"><use href="#i-bat"/></svg>Modo ligero
+        </button>
+        <button class="mode mode--icon" type="button" data-mode="a11y" aria-pressed="false" aria-label="Modo accesible: página quieta, texto más grande y foco visible" title="Modo accesible">
+          <svg aria-hidden="true"><use href="#i-a11y"/></svg>
+        </button>
+        <button class="mode mode--icon" type="button" data-island-close aria-label="Cerrar">
+          <svg aria-hidden="true"><use href="#i-x"/></svg>
+        </button>
+      </div>
+    </div>
+    <ol class="island__list" data-island-list></ol>
+    <div class="island__actions">
+      <a class="btn btn--gold" href="#agenda" data-agendar>Agendar llamada</a>
+      <a class="btn btn--wa" href="https://wa.me/5492478577335?text=Hola%2C%20vengo%20de%20la%20web%20de%20FaithAgency%20y%20me%20gustar%C3%ADa%20saber%20m%C3%A1s." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+    </div>
+  </div>
+</nav>
+<div class="island__scrim" data-island-scrim hidden></div>
 </body>
 </html>
